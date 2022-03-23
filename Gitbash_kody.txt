@@ -1,0 +1,352 @@
+
+GEOPLAN@GEOPLAN MINGW64 ~
+$ git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+
+GEOPLAN@GEOPLAN MINGW64 ~
+$ git config --global user.name 'mpodciborski'
+
+GEOPLAN@GEOPLAN MINGW64 ~
+$ git config --global user.email 'geoplanmp@gmail.com'
+
+GEOPLAN@GEOPLAN MINGW64 ~
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager-core
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=mpodciborski
+user.email=geoplanmp@gmail.com
+
+GEOPLAN@GEOPLAN MINGW64 ~
+$ cd --/Desktop/projekt-startowy/
+bash: cd: --: invalid option
+cd: usage: cd [-L|[-P [-e]] [-@]] [dir]
+
+GEOPLAN@GEOPLAN MINGW64 ~
+$ cd --/Geoplan/projekt-startowy/
+bash: cd: --: invalid option
+cd: usage: cd [-L|[-P [-e]] [-@]] [dir]
+
+GEOPLAN@GEOPLAN MINGW64 ~
+$ cd --/Desktop/projekt-startowy
+bash: cd: --: invalid option
+cd: usage: cd [-L|[-P [-e]] [-@]] [dir]
+
+GEOPLAN@GEOPLAN MINGW64 ~
+$ ^C
+
+GEOPLAN@GEOPLAN MINGW64 ~
+$ cd --/Geoplan/Dekstop/projekt-startowy
+bash: cd: --: invalid option
+cd: usage: cd [-L|[-P [-e]] [-@]] [dir]
+
+GEOPLAN@GEOPLAN MINGW64 ~
+$ cd --/Geoplan/Desktop/projekt-startowy
+bash: cd: --: invalid option
+cd: usage: cd [-L|[-P [-e]] [-@]] [dir]
+
+GEOPLAN@GEOPLAN MINGW64 ~
+$ cd --/Geoplan/Pulpti/projekt-startowy
+bash: cd: --: invalid option
+cd: usage: cd [-L|[-P [-e]] [-@]] [dir]
+
+GEOPLAN@GEOPLAN MINGW64 ~
+$ cd ~/Desktop/projekt-startowy/
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy
+$ touch index.html
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy
+$ git init
+Initialized empty Git repository in C:/Users/GEOPLAN/Desktop/projekt-startowy/.git/
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy (master)
+$ git add *
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy (master)
+$ git commit -m 'rozpoczecie projektu'
+[master (root-commit) b83e20b] rozpoczecie projektu
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy (master)
+$ git remote add origin https://github.com/geoplanmp/projekt-startowy.git
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy (master)
+$ git push -u origin master
+
+
+
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 221 bytes | 221.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/geoplanmp/projekt-startowy.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy (master)
+$ git push -u origin master
+Everything up-to-date
+branch 'master' set up to track 'origin/master'.
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy (master)
+$ git add *
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy (master)
+$ -git commit -m 'pierwsza zmiana'
+bash: -git: command not found
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy (master)
+$ git push
+Everything up-to-date
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy (master)
+$ git add *
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy (master)
+$  git commit -m 'pierwsza zmiana'
+[master 455261c] pierwsza zmiana
+ 1 file changed, 1 insertion(+)
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 257 bytes | 257.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/geoplanmp/projekt-startowy.git
+   b83e20b..455261c  master -> master
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy (master)
+$ cd~/Desktop/git-zadanie1
+bash: cd~/Desktop/git-zadanie1: No such file or directory
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/projekt-startowy (master)
+$ cd ..
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop
+$ cd ~/Desktop/git-zadanie1
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie1
+$ git init
+Initialized empty Git repository in C:/Users/GEOPLAN/Desktop/git-zadanie1/.git/
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie1 (master)
+$ touch index.html
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie1 (master)
+$ git add *
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie1 (master)
+$ git remote add origin https://github.com/geoplanmp/git-zadanie1.git
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie1 (master)
+$ git commit -m "stworzenie pliku"
+[master (root-commit) c26aabb] stworzenie pliku
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie1 (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/geoplanmp/git-zadanie1.git'
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie1 (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie1 (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 219 bytes | 219.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/geoplanmp/git-zadanie1.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie1 (master)
+$ cd ..
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop
+$ cd git-zdanie2
+bash: cd: git-zdanie2: No such file or directory
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop
+$ cd git-zadanie2
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2
+$ git init
+Initialized empty Git repository in C:/Users/GEOPLAN/Desktop/git-zadanie2/.git/
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git add *
+fatal: pathspec '*' did not match any files
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git add*
+git: 'add*' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ $ git add *
+bash: $: command not found
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git add *
+fatal: pathspec '*' did not match any files
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git add *
+fatal: pathspec '*' did not match any files
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/GEOPLAN/Desktop/git-zadanie2/.git/
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git add *
+fatal: pathspec '*' did not match any files
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ touch index.html
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git add *
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git remote add origin https://github.com/geoplanmp/git-zadanie2.git
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git commit -m "stworzenie pliku"
+[master (root-commit) 1d52564] stworzenie pliku
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git commit -m "stworzenie paragrafu"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 219 bytes | 219.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/geoplanmp/git-zadanie2.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git commit -m "stworzenie paragrafu"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git push
+Everything up-to-date
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git add *
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git commit -m "stworzenie paragrafu"
+[master a937068] stworzenie paragrafu
+ 1 file changed, 1 insertion(+)
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 289 bytes | 289.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/geoplanmp/git-zadanie2.git
+   1d52564..a937068  master -> master
+
+GEOPLAN@GEOPLAN MINGW64 ~/Desktop/git-zadanie2 (master)
+$
